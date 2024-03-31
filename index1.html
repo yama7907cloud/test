@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>upload</title>
+</head>
+<body>
+  <h1>名前で保存する</h1>
+  <p>d6 リソースシートb3 完了以外を表示</p>
+ 
+<pre>
+  <code>
+    <%@ LANGUAGE=VBSCRIPT %>
+    <%
+    
+    %>
+     <html>
+    <head>
+    <meta charset="Shift_JIS">
+    <title>ASP Sample</title>
+    </head>
+    <body>
+    <%
+    Set test = Server.CreateObject("Scripting.Dictionary")
+    'Dictionary tuika
+    test.Add "aaa", "itou"
+    test.Add "bbb", "tanaka"
+    test.Add "ccc", "suzukigttgt"
+    'yousosuu
+    Response.Write test.Count & "<br>"
+    
+    Response.Write "k:" & test.Item("ccc")& "<br>"
+    
+    'Dictionary Fordeataiwohyouji
+    b=test.Items
+    c=test.keys
+    for i = 0 to test.Count-1
+      If  b(i)="tanaka" Then
+        Response.Write "koumoku:" & b(i) & "<br>"
+      ElseIf  b(i)="suzukigttgt" Then
+        Response.Write "suzuki umakuitta" & "<br>"
+        Response.Write Len(b(i)) & "<br>"
+       End If
+    next 
+    for i = 0 to test.Count-1
+        Response.Write "ki-:" & c(i) & "<br>"
+    next 
+    %>
+    </body>
+    </html>
+  </code>
+</pre>
+  
+</body>
+</html>
